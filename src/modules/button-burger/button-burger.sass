@@ -1,0 +1,48 @@
+.button-burger
+    width: 6.06837607%
+    padding: 2.64957265% // это
+    padding: 2.64957265% 2.13675214% // это
+    border: none
+    border-left: 1px solid #ede6f8
+    border-right: 1px solid #ede6f8
+    background: none // это
+    outline: none // это
+    cursor: pointer  // это
+    // display: flex // это
+    // justify-content: center // это
+    // align-items: center // это
+    &__line
+        width: 100%
+        padding: 7.89473684% 0 // это
+        // min-width: 20px // это
+        // height: 3px // это
+        background-color: $blue
+        position: relative
+        &:before, &:after
+            position: absolute
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            background-color: $blue
+            transition: all .5s ease
+        &:before
+            top: 8px
+            left: 0
+        &:after
+            bottom: 8px
+            left: 0
+
+.active
+    .button-burger__line
+        visibility: hidden
+        &:before
+            visibility: visible
+            transform: rotate(45deg)
+            top: 0
+            width: 100%
+        &:after
+            visibility: visible
+            transform: rotate(-45deg)
+            bottom: 0
+            width: 100%

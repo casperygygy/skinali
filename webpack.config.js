@@ -21,7 +21,8 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
-        port: 4200
+        host: '192.168.145.31',
+        port: 3000
     },
     plugins: [
         new HTMLPlugin({
@@ -56,6 +57,16 @@ module.exports = {
                 test: /\.js$/, 
                 exclude: /node_modules/, 
                 loader: "babel-loader"
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
             }
         ]
     }
