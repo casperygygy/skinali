@@ -1,0 +1,62 @@
+const path = require('path');
+const HTMLPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+require("@babel/polyfill");
+
+
+module.exports = {
+    entry: ["@babel/polyfill", './src/index.js'],
+    output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    optimization: {
+        minimizer: [
+            new OptimizeCssAssetsPlugin({}),
+            new TerserPlugin()
+        ]
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist'),
+        port: 4200
+    },
+    plugins: [
+        new HTMLPlugin({
+            filename: 'index.html',
+            template: './src/index.pug'
+        }),
+        
+        new MiniCssExtractPlugin({
+            filename: 'main.css'
+        }),
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.pug$/,
+                use: {
+                    loader: 'pug-loader',
+                    options: {
+                        pretty: true
+                    }
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader,'css-loader']
+            },
+            {
+                test: /\.sass$/,
+                use: [MiniCssExtractPlugin.loader,'css-loader', 'sass-loader']
+            },
+            { 
+                test: /\.js$/, 
+                exclude: /node_modules/, 
+                loader: "babel-loader"
+            }
+        ]
+    }
+}
