@@ -1,1 +1,22 @@
-.header
+.header            
+    &__navbar
+        position: fixed
+        left: 0
+        top: 0
+        width: 100%
+        background-color: #ffffff
+        z-index: 2
+    &__menu
+        position: absolute
+        top: -2000px
+        left: 0
+        width: 100% 
+        background-color: $blue
+        transition: top .3s ease, visibility .3s ease 
+        visibility: hidden
+        pointer-events: none
+        z-index: 0
+    &__menu-display
+        visibility: visible
+        top: 80px
+        pointer-events: auto

@@ -47,11 +47,30 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+sub, sup {
+  /* Specified in % so that the sup/sup is the right size relative to the surrounding text */
+  font-size: 75%;
+  /* Zero out the line-height so that it doesn't interfere with the positioning that follows */
+  line-height: 0;
+  /* Where the magic happens: makes all browsers position the sup/sup properly, relative to the surrounding text */
+  position: relative;
+  /* Note that if you're using Eric Meyer reset.css, this is already set and you can remove this rule */
+  vertical-align: baseline; }
+
+sup {
+  /* Move the superscripted text up */
+  top: -0.5em;
+  left: -0.3em; }
+
+sub {
+  /* Move the subscripted text down, but only half as far down as the superscript moved up */
+  bottom: -0.25em; }
+
 /***********************MEDIA QUERIES***********************/
 /***********************COLORS & FONTS***********************/
 @font-face {
   font-family: "ProximaNova";
-  src: url(fonts/FontsFree-Net-Proxima-Nova-Bold.otf);
+  src: url(fonts/ProximaNova-Semibold.ttf);
   font-style: normal;
   font-weight: 800; }
 
@@ -66,29 +85,133 @@ body {
   font-weight: 100; }
 
 .container {
-  width: 60.9375%;
-  margin: 0 auto; }
+  width: 1170px;
+  margin: 0 auto;
+  font-size: 25px; }
+
+@media screen and (max-width: 1170px) {
+  html {
+    font-size: 14px; }
+  .container {
+    width: 990px; } }
 
 .navbar {
   display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: flex-start;
+  min-height: 80px;
   font-size: 1rem; }
+  .navbar__logo {
+    margin-left: 2.5641%; }
+  .navbar__mobile {
+    margin-left: 17.6923%; }
+  .navbar__stationary {
+    margin-left: 9.5726%; }
+  .navbar__button {
+    margin-left: auto; }
 
-.menu-button {
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #507fe1;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap; }
+  .button--transparent {
+    font-size: 0.75rem;
+    background-color: #ffffff;
+    color: #507fe1;
+    border: 2px solid #507fe1;
+    padding: 1.145299% 1.7094%; }
+    .button--transparent:hover {
+      background-color: #507fe1;
+      color: #ffffff; }
+
+.button-burger {
   width: 6.06837607%;
-  padding: 2.64957265% 2.13675214%;
+  padding: 3.3% 0;
   border: none;
   border-left: 1px solid #ede6f8;
   border-right: 1px solid #ede6f8;
   background: none;
-  outline: none; }
-  .menu-button__line {
-    width: 100%;
-    padding: 7.89473684%;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .button-burger__line {
+    width: 20px;
+    height: 3px;
     background-color: #507fe1;
+    position: relative; }
+    .button-burger__line:before, .button-burger__line:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #507fe1;
+      transition: all .5s ease; }
+    .button-burger__line:before {
+      top: 8px;
+      left: 0; }
+    .button-burger__line:after {
+      bottom: 8px;
+      left: 0; }
+
+.active .button-burger__line {
+  visibility: hidden; }
+  .active .button-burger__line:before {
+    visibility: visible;
+    transform: rotate(45deg);
+    top: 0;
+    width: 100%; }
+  .active .button-burger__line:after {
+    visibility: visible;
+    transform: rotate(-45deg);
+    bottom: 0;
+    width: 100%; }
+
+.logo {
+  min-width: 100%;
+  white-space: nowrap;
+  text-decoration: none;
+  display: block; }
+  .logo__title {
+    display: flex;
     margin-bottom: 5px;
-    display: block; }
-    .menu-button__line:last-child {
-      margin-bottom: 0; }
+    text-transform: uppercase;
+    color: #262626;
+    font-size: 1.125rem;
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 800; }
+  .logo__description {
+    color: #7b7b79;
+    font-size: 0.875rem; }
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  text-align: right; }
+  .phone__number {
+    margin-bottom: 3.66139%;
+    text-decoration: none;
+    color: #262626;
+    font-size: 1.125rem;
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 800; }
+  .phone__small-text {
+    color: #7b7b79;
+    font-size: 0.875rem; }
+
+.hero {
+  background-color: #f1f1f1 url(84e71693bacfddf156b029031ef4a642.png) no-repeat center;
+  background-size: cover; }
 

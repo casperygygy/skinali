@@ -3561,7 +3561,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.sass */ \"./src/main.sass\");\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_sass__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"hello world\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/button-burger/button-burger */ \"./src/modules/button-burger/button-burger.js\");\n/* harmony import */ var _modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.sass */ \"./src/main.sass\");\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_main_sass__WEBPACK_IMPORTED_MODULE_1__);\n//*********************************************\n//\t\tScript\n//*********************************************\n //*********************************************\n//\t\tStyle\n//*********************************************\n\n\nconsole.log(\"hello world\");\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -3573,6 +3573,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/main.sass?");
+
+/***/ }),
+
+/***/ "./src/modules/button-burger/button-burger.js":
+/*!****************************************************!*\
+  !*** ./src/modules/button-burger/button-burger.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// button-burger\n(function () {\n  var burger = document.querySelector('.button-burger');\n  burger.addEventListener('click', function () {\n    burger.classList.toggle('active');\n  });\n})();\n\n//# sourceURL=webpack:///./src/modules/button-burger/button-burger.js?");
 
 /***/ }),
 

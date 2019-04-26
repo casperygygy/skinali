@@ -1,4 +1,27 @@
 header.header
-    .container
-        include ../navbar/navbar
-    
+    .header__navbar
+        .container
+            include ../navbar/navbar
+
+    nav.header__menu
+        .container
+            ul.menu
+                li.menu__item
+                    a(href="#").menu__link Главная
+                li.menu__item
+                    a(href="#").menu__link Продукция
+                li.menu__item
+                    a(href="#").menu__link Каталог
+                li.menu__item
+                    a(href="#").menu__link Примеры работ
+                li.menu__item
+                    a(href="#").menu__link Примерка изображений
+                li.menu__item
+                    a(href="#").menu__link Стоимость дилерам
+                li.menu__item
+                    a(href="#").menu__link О скинали
+    .hero
+        .container
+            h1.hero__title Гарантия</br>минимальной цены</br>на скинали
+            p.hero__subtitle от 3000 р/м <sup>2</sup>
+            button.button.button--hero.hero__button Заказать скинали
