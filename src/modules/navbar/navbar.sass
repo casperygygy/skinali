@@ -3,7 +3,6 @@
     align-items: center
     justify-content: flex-start
     min-height: 80px
-    font-size: 1rem
 
     &__logo
         margin-left: 2.5641%
@@ -14,3 +13,24 @@
     &__button
         // margin-left: 2.5641%
         margin-left: auto
+
+
+// media
+
++max-screen(1024px)
+    .navbar
+        &__mobile
+            margin-left: 10%
+        &__stationary
+            margin-left: 5%
+        &__button
+            margin-left: 2.5641%
++max-screen(760px)
+    .navbar
+        min-height: 65px
+        justify-content: space-between
+        &__logo, &__mobile, &__stationary, &__button
+            margin: 0
++max-screen(540px)
+    .navbar
+        min-height: 50px

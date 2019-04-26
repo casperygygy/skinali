@@ -2,6 +2,7 @@
     display: flex
     flex-direction: column
     text-align: right
+    white-space: nowrap
     &__number
         margin-bottom: 3.66139%
         text-decoration: none
@@ -11,3 +12,12 @@
     &__small-text
         color: $text-color-light
         font-size: 0.875rem
+
+
++max-screen(1024px)
+    .phone
+        &__number
+            font-size: .8rem
++max-screen(760px)
+    .phone
+        display: none

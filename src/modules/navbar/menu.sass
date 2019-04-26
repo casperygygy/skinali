@@ -1,9 +1,22 @@
 .menu
     display: flex
     justify-content: space-between
+    align-items: center
     font-size: 1rem
     text-transform: uppercase
     padding: 1.62393% 0
     &__link
         color: #ffffff
         text-decoration: none
+
+
++max-screen(1024px)
+    .menu
+        font-size: .8rem
++max-screen(760px)
+    .menu
+        font-size: .6rem
++max-screen(540px)
+    .menu
+        font-size: .45rem
+        padding-bottom: 1% 
