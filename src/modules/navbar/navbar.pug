@@ -1,14 +1,13 @@
 .navbar
     include ../button-burger/button-burger
     
-    .logo.navbar__logo
-        strong.logo__title Фабрика скинали №1
-        span.logo__description ведущий производитель скинали
+    .navbar__logo
+        include ../logo/logo
     .phone.navbar__mobile
         a(href="tel:+79121234567").phone__number +7 912 123-45-67
-        span.navbar__work-time без выходных 9-21
+        span.phone__work-time.phone__small-text без выходных 9-21
     .phone.navbar__stationary
         a(href="tel:+79121234567").phone__number +7 912 123-45-67
-        a(href="mailto:info@mail.cu").navbar__email info@mail.cu
+        a(href="mailto:info@mail.cu").phone__email.phone__small-text info@mail.cu
 
     button.button.button--transparent.navbar__button Получить консультацию

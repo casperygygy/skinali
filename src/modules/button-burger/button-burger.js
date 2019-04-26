@@ -1,3 +1,4 @@
+// button-burger
 (() => {
     const burger = document.querySelector('.button-burger');
     burger.addEventListener('click', () => {
