@@ -86,8 +86,10 @@ body {
 
 .container {
   width: 1170px;
-  margin: 0 auto;
-  font-size: 25px; }
+  margin: 0 auto; }
+
+.bg-section {
+  background-color: #f1f1f1; }
 
 @media screen and (max-width: 1170px) {
   html {
@@ -95,12 +97,57 @@ body {
   .container {
     width: 990px; } }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 760px; } }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 540px; } }
+
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 10px; }
+  .container {
+    width: 290px; } }
+
+.header__navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 2; }
+
+.header__menu {
+  position: absolute;
+  top: -2000px;
+  left: 0;
+  width: 100%;
+  background-color: #507fe1;
+  transition: top .3s ease, visibility .3s ease;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 0; }
+
+.header__menu-display {
+  visibility: visible;
+  top: 80px;
+  pointer-events: auto; }
+
+@media screen and (max-width: 768px) {
+  .header__menu-display {
+    top: 65px; } }
+
+@media screen and (max-width: 540px) {
+  .header__menu-display {
+    top: 50px; } }
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-height: 80px;
-  font-size: 1rem; }
+  min-height: 80px; }
   .navbar__logo {
     margin-left: 2.5641%; }
   .navbar__mobile {
@@ -109,6 +156,67 @@ body {
     margin-left: 9.5726%; }
   .navbar__button {
     margin-left: auto; }
+
+@media screen and (max-width: 1024px) {
+  .navbar__mobile {
+    margin-left: 10%; }
+  .navbar__stationary {
+    margin-left: 5%; }
+  .navbar__button {
+    margin-left: 2.5641%; } }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    min-height: 65px;
+    justify-content: space-between; }
+    .navbar__logo, .navbar__mobile, .navbar__stationary, .navbar__button {
+      margin: 0; } }
+
+@media screen and (max-width: 540px) {
+  .navbar {
+    min-height: 50px; } }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1.62393% 0; }
+  .menu__link {
+    color: #ffffff;
+    text-decoration: none; }
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    font-size: .8rem; } }
+
+@media screen and (max-width: 769px) {
+  .menu {
+    font-size: .6rem; } }
+
+@media screen and (max-width: 540px) {
+  .menu {
+    font-size: .45rem;
+    padding-bottom: 1%; } }
+
+.offer__title {
+  margin-bottom: 2.2%;
+  text-transform: uppercase;
+  font-size: 1.5625rem;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 800; }
+
+.offer__description {
+  display: block;
+  margin-bottom: 4.25%;
+  font-size: 1.3125rem; }
+
+.offer-block {
+  width: 100%;
+  padding: 6.83760684% 16.2393162% 6.83760684% 6.83760684%;
+  background-color: white;
+  box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1); }
 
 .button {
   display: flex;
@@ -133,6 +241,17 @@ body {
     .button--transparent:hover {
       background-color: #507fe1;
       color: #ffffff; }
+  .button--hero {
+    line-height: .7;
+    padding: 2.13675% 3.84615%; }
+    .button--hero:hover {
+      background-color: #3866c7; }
+  .button--form {
+    width: 100%;
+    padding: 11.6666% 0;
+    line-height: .9; }
+    .button--form:hover {
+      background-color: #3866c7; }
 
 .button-burger {
   width: 6.06837607%;
@@ -179,6 +298,11 @@ body {
     bottom: 0;
     width: 100%; }
 
+@media screen and (max-width: 768px) {
+  .button-burger {
+    padding: 0;
+    border: none; } }
+
 .logo {
   min-width: 100%;
   white-space: nowrap;
@@ -196,10 +320,18 @@ body {
     color: #7b7b79;
     font-size: 0.875rem; }
 
+@media screen and (max-width: 540px) {
+  .logo__title {
+    margin-bottom: 0;
+    font-size: 1rem; }
+  .logo__description {
+    font-size: .7rem; } }
+
 .phone {
   display: flex;
   flex-direction: column;
-  text-align: right; }
+  text-align: right;
+  white-space: nowrap; }
   .phone__number {
     margin-bottom: 3.66139%;
     text-decoration: none;
@@ -211,7 +343,94 @@ body {
     color: #7b7b79;
     font-size: 0.875rem; }
 
+@media screen and (max-width: 1024px) {
+  .phone__number {
+    font-size: .8rem; } }
+
+@media screen and (max-width: 768px) {
+  .phone {
+    display: none; } }
+
 .hero {
-  background-color: #f1f1f1 url(84e71693bacfddf156b029031ef4a642.png) no-repeat center;
-  background-size: cover; }
+  background: #f1f1f1 url(img/hero-background.png) no-repeat center top 80px;
+  background-size: contain;
+  padding-top: 10.4166%;
+  padding-bottom: 14.0625%;
+  font-size: 1.875rem; }
+  .hero__title {
+    margin-bottom: 3%; }
+  .hero__subtitle {
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 800;
+    margin-bottom: 5%; }
+
+@media screen and (max-width: 1400px) {
+  .hero {
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    padding-top: 15%;
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: center top 65px;
+    padding-top: 20%;
+    font-size: 1rem; } }
+
+@media screen and (max-width: 540px) {
+  .hero {
+    background-position: center top 50px; } }
+
+.form__row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.form__label {
+  margin-bottom: 5%;
+  display: block;
+  font-size: 1.0625rem; }
+  .form__label--checkbox {
+    display: flex;
+    align-items: center;
+    margin: 8.5% 0; }
+
+.form__group {
+  flex-basis: 33.33%; }
+
+.form__input, .form .dropdown {
+  width: 100%;
+  padding: 11% 6.66% 11% 10%;
+  border: 1px solid #dddddd; }
+
+.form__input {
+  border-left-width: 0; }
+
+.form__checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute; }
+
+.form__custom-checkbox {
+  display: block;
+  width: 10%;
+  padding: 4.49% 0;
+  border: 1px solid #dddddd;
+  margin-right: 20px;
+  cursor: pointer; }
+
+.form .lft-b {
+  border-left-width: 1px; }
+
+.form__checkbox:checked + .form__custom-checkbox {
+  background-color: #507fe1; }
+
+.dropdown {
+  line-height: 0.99; }
+  .dropdown__label {
+    font-size: 1.0625rem;
+    margin-bottom: 5%; }
 

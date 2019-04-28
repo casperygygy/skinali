@@ -1,0 +1,50 @@
+.form
+    &__row
+        display: flex
+        justify-content: flex-start
+        align-items: center
+    &__label
+        margin-bottom: 5%
+        display: block
+        font-size: 1.0625rem
+        &--checkbox
+            display: flex
+            align-items: center
+            margin: 8.5% 0
+    &__group
+        flex-basis: 33.33%
+    
+    &__input, .dropdown
+        width: 100%
+        padding: 11% 6.66% 11% 10%
+        border: 1px solid #dddddd
+    &__input
+        border-left-width: 0
+    
+    &__checkbox
+        appearance: none
+        -webkit-appearance: none
+        -moz-appearance: none
+        position: absolute
+    &__custom-checkbox
+        display: block
+        width: 10%
+        padding: 4.49% 0
+        border: 1px solid #dddddd
+        margin-right: 20px
+        cursor: pointer
+
+    .lft-b
+        border-left-width: 1px
+
+// Checked checkbox
+.form__checkbox:checked + .form__custom-checkbox
+    background-color: $blue
+
+// custom select
+.dropdown
+    line-height: .99
+        // outline: 1px solid rgb(77, 144, 254)
+    &__label
+        font-size: 1.0625rem
+        margin-bottom: 5%

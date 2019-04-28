@@ -3583,7 +3583,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// button-burger\n(function () {\n  var burger = document.querySelector('.button-burger');\n  burger.addEventListener('click', function () {\n    burger.classList.toggle('active');\n  });\n})();\n\n//# sourceURL=webpack:///./src/modules/button-burger/button-burger.js?");
+eval("// button-burger\n(function () {\n  // burger-animation\n  var burger = document.querySelector('.button-burger');\n  burger.addEventListener('click', function () {\n    burger.classList.toggle('active');\n  }); // menu displayed\n\n  burger.addEventListener('click', function () {\n    var menu = document.querySelector('.header__menu');\n    menu.classList.toggle('header__menu-display');\n  });\n})();\n\n//# sourceURL=webpack:///./src/modules/button-burger/button-burger.js?");
 
 /***/ }),
 

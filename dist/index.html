@@ -9,7 +9,8 @@
   <link href="main.css" rel="stylesheet"></head>
   <body>
 <header class="header">
-  <div class="container">
+  <div class="header__navbar">
+    <div class="container">
 <div class="navbar">
 <button class="button-burger">
   <div class="button-burger__line"></div>
@@ -20,14 +21,78 @@
   <div class="phone navbar__stationary"><a class="phone__number" href="tel:+79121234567">+7 912 123-45-67</a><a class="phone__email phone__small-text" href="mailto:info@mail.cu">info@mail.cu</a></div>
   <button class="button button--transparent navbar__button">Получить консультацию</button>
 </div>
+    </div>
   </div>
+  <nav class="header__menu">
+    <div class="container">
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Продукция</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Каталог</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Примеры работ</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Примерка изображений</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Стоимость дилерам</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">О скинали</a></li>
+      </ul>
+    </div>
+  </nav>
   <div class="hero">
     <div class="container">
       <h1 class="hero__title">Гарантия</br>минимальной цены</br>на скинали</h1>
       <p class="hero__subtitle">от 3000 р/м <sup>2</sup></p>
-      <button class="button hero__button">Заказать скинали</button>
+      <button class="button button--hero hero__button">Заказать скинали</button>
     </div>
   </div>
 </header>
+    <div class="main">
+<section class="offer bg-section">
+  <div class="container">
+    <div class="offer__block offer-block">
+      <h2 class="offer__title">Оставте заявку на расчет</h2><span class="offer__description">и получите скидку 30% на изготовление скинали или фартука для кухни</span>
+      <form class="form offer__form" action="#">
+        <div class="form__row">
+          <div class="form__group">
+            <div class="dropdown__label">Вид стекла</div>
+            <div class="dropdown">
+              <div class="dropdown__item">С печатью</div>
+            </div>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="">Ширина,см</label>
+            <input class="form__input" type="text">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="">Высота,см</label>
+            <input class="form__input" type="text">
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label form__label--checkbox" for="1">
+              <input class="form__checkbox" id="1" type="checkbox" checked><span class="form__custom-checkbox"></span>Монтаж
+            </label>
+          </div>
+          <div class="form__group">
+            <label class="form__label form__label--checkbox" for="">
+              <input class="form__checkbox" type="checkbox"><span class="form__custom-checkbox"></span>Доставка
+            </label>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <input class="form__input lft-b" type="text" placeholder="Ваше имя">
+          </div>
+          <div class="form__group">
+            <input class="form__input" type="tel" placeholder="Ваш телефон">
+          </div>
+          <div class="form__group">
+            <input class="button button--form" type="submit" value="Получить скидку">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+    </div>
   <script type="text/javascript" src="main.js"></script></body>
 </html>

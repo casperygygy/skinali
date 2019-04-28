@@ -1,0 +1,37 @@
+section.offer.bg-section
+    .container
+        .offer__block.offer-block
+            h2.offer__title Оставте заявку на расчет
+            span.offer__description и получите скидку 30% на изготовление скинали или фартука для кухни
+            form(action="#" class="form offer__form")
+                .form__row
+                    .form__group
+                        .dropdown__label Вид стекла
+                        .dropdown
+                            .dropdown__item С печатью
+                    .form__group
+                        label(for="" class="form__label") Ширина,см
+                        input(type="text" class="form__input")
+                    .form__group
+                        label(for="" class="form__label") Высота,см
+                        input(type="text" class="form__input")
+
+                .form__row
+                    .form__group
+                        label(for="montag" class="form__label form__label--checkbox")
+                            input(id="montag" type="checkbox" class="form__checkbox" checked)
+                            span.form__custom-checkbox
+                            | Монтаж
+                    .form__group
+                        label(for="dostavka" class="form__label form__label--checkbox")
+                            input(id="dostavka" type="checkbox" class="form__checkbox")
+                            span.form__custom-checkbox
+                            | Доставка
+                        
+                .form__row
+                    .form__group
+                        input(type="text" class="form__input lft-b" placeholder="Ваше имя")
+                    .form__group
+                        input(type="tel" class="form__input" placeholder="Ваш телефон")
+                    .form__group
+                        input(type="submit" value="Получить скидку").button.button--form
