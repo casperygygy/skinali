@@ -215,8 +215,26 @@ body {
 .offer-block {
   width: 100%;
   padding: 6.83760684% 16.2393162% 6.83760684% 6.83760684%;
-  background-color: white;
+  background: #ffffff url(img/offer-bg.png) no-repeat center right;
+  background-size: contain;
   box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1); }
+
+@media screen and (max-width: 768px) {
+  .offer__title {
+    font-size: 1.2rem;
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 800; }
+  .offer__description {
+    font-size: 1rem; } }
+
+@media screen and (max-width: 540px) {
+  .offer-block {
+    background-image: none;
+    padding: 6.83760684%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; } }
 
 .button {
   display: flex;
@@ -252,6 +270,10 @@ body {
     line-height: .9; }
     .button--form:hover {
       background-color: #3866c7; }
+
+@media screen and (max-width: 1024px) {
+  .button--form {
+    line-height: 1.2; } }
 
 .button-burger {
   width: 6.06837607%;
@@ -429,8 +451,79 @@ body {
   background-color: #507fe1; }
 
 .dropdown {
-  line-height: 0.99; }
+  position: relative;
+  line-height: .99;
+  cursor: pointer; }
   .dropdown__label {
     font-size: 1.0625rem;
     margin-bottom: 5%; }
+  .dropdown__list {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    top: -5000px;
+    left: -1px;
+    width: calc(100% + 2px);
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd; }
+  .dropdown__item {
+    width: 100%;
+    padding: 5.5% 6.666% 5.5% 10%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    cursor: pointer; }
+    .dropdown__item:hover {
+      background-color: #dddddd; }
+
+.open .dropdown__list {
+  top: calc(100% + 1px);
+  visibility: visible;
+  pointer-events: auto; }
+
+@media screen and (max-width: 1170px) {
+  .dropdown {
+    line-height: 1; } }
+
+@media screen and (max-width: 1024px) {
+  .dropdown {
+    line-height: 1.1; } }
+
+@media screen and (max-width: 540px) {
+  .form__row {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .form__row--checkbox {
+      margin: 15px 0;
+      flex-direction: row; }
+  .form__group {
+    width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; }
+    .form__group--checkbox {
+      margin: 0; }
+    .form__group:last-child {
+      margin-bottom: 0; }
+  .form__label {
+    margin-bottom: 5px; }
+    .form__label--checkbox {
+      margin: 0; }
+  .form__custom-checkbox {
+    width: 15px;
+    height: 15px; }
+  .form__input {
+    border-left-width: 1px; }
+  .form .dropdown {
+    text-align: center; }
+    .form .dropdown__label {
+      margin-bottom: 5px; }
+    .form .dropdown__item {
+      background-color: #dddddd;
+      border-color: #ffffff; }
+      .form .dropdown__item:hover {
+        background-color: #ffffff; } }
 

@@ -2,11 +2,11 @@
 //		Script
 //*********************************************
 import './modules/button-burger/button-burger'
+import './modules/form/dropdown'
 
 //*********************************************
 //		Style
 //*********************************************
 import './main.sass'
 
-console.log("hello world")
 

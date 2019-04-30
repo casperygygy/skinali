@@ -43,8 +43,83 @@
 
 // custom select
 .dropdown
+    position: relative
     line-height: .99
-        // outline: 1px solid rgb(77, 144, 254)
+    cursor: pointer
+
     &__label
         font-size: 1.0625rem
         margin-bottom: 5%
+    &__list
+        position: absolute
+        visibility: hidden
+        pointer-events: none
+        top: -5000px
+        left: -1px
+        width: calc(100% + 2px)
+        border-left: 1px solid #dddddd
+        border-right: 1px solid #dddddd
+    &__item
+        width: 100%
+        padding: 5.5% 6.666% 5.5% 10%
+        background-color: #ffffff
+        border-bottom: 1px solid #dddddd
+        cursor: pointer
+        &:hover
+            background-color: #dddddd
+
+.open
+    .dropdown__list
+        top: calc(100% + 1px)
+        visibility: visible
+        pointer-events: auto
+
+
+
++max-screen(1170px)
+    .dropdown
+        line-height: 1
++max-screen(1024px)
+    .dropdown
+        line-height: 1.1
+
++max-screen(540px)
+    .form
+        &__row
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            &--checkbox
+                margin: 15px 0
+                flex-direction: row
+        &__group
+            width: 100%
+            flex-basis: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin-bottom: 15px
+            &--checkbox
+                margin: 0
+            &:last-child
+                margin-bottom: 0
+        &__label
+            margin-bottom: 5px
+            &--checkbox
+                margin: 0
+                
+        &__custom-checkbox
+            width: 15px
+            height: 15px
+        &__input
+            border-left-width: 1px
+        .dropdown
+            text-align: center
+            &__label
+                margin-bottom: 5px
+            &__item
+                background-color: #dddddd
+                border-color: #ffffff
+                &:hover
+                    background-color: #ffffff

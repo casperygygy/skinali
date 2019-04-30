@@ -7,22 +7,27 @@ section.offer.bg-section
                 .form__row
                     .form__group
                         .dropdown__label Вид стекла
-                        .dropdown
-                            .dropdown__item С печатью
+                        div.dropdown#dropdown
+                            span.dropdown__textfield Выберете стекло
+                            ul.dropdown__list#list
+                                li.dropdown__item С печатью
+                                li.dropdown__item Без печати
+                                li.dropdown__item Теплые
+                                li.dropdown__item Холодные
                     .form__group
-                        label(for="" class="form__label") Ширина,см
-                        input(type="text" class="form__input")
+                        label(for="form-width" class="form__label") Ширина,см
+                        input(id="form-width" type="text" class="form__input")
                     .form__group
-                        label(for="" class="form__label") Высота,см
-                        input(type="text" class="form__input")
+                        label(for="form-height" class="form__label") Высота,см
+                        input(id="form-height" type="text" class="form__input")
 
-                .form__row
-                    .form__group
+                .form__row.form__row--checkbox
+                    .form__group.form__group--checkbox
                         label(for="montag" class="form__label form__label--checkbox")
                             input(id="montag" type="checkbox" class="form__checkbox" checked)
                             span.form__custom-checkbox
                             | Монтаж
-                    .form__group
+                    .form__group.form__group--checkbox
                         label(for="dostavka" class="form__label form__label--checkbox")
                             input(id="dostavka" type="checkbox" class="form__checkbox")
                             span.form__custom-checkbox

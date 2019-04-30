@@ -53,28 +53,33 @@
         <div class="form__row">
           <div class="form__group">
             <div class="dropdown__label">Вид стекла</div>
-            <div class="dropdown">
-              <div class="dropdown__item">С печатью</div>
+            <div class="dropdown" id="dropdown"><span class="dropdown__textfield">Выберете стекло</span>
+              <ul class="dropdown__list" id="list">
+                <li class="dropdown__item">С печатью</li>
+                <li class="dropdown__item">Без печати</li>
+                <li class="dropdown__item">Теплые</li>
+                <li class="dropdown__item">Холодные</li>
+              </ul>
             </div>
           </div>
           <div class="form__group">
-            <label class="form__label" for="">Ширина,см</label>
-            <input class="form__input" type="text">
+            <label class="form__label" for="form-width">Ширина,см</label>
+            <input class="form__input" id="form-width" type="text">
           </div>
           <div class="form__group">
-            <label class="form__label" for="">Высота,см</label>
-            <input class="form__input" type="text">
+            <label class="form__label" for="form-height">Высота,см</label>
+            <input class="form__input" id="form-height" type="text">
           </div>
         </div>
-        <div class="form__row">
-          <div class="form__group">
-            <label class="form__label form__label--checkbox" for="1">
-              <input class="form__checkbox" id="1" type="checkbox" checked><span class="form__custom-checkbox"></span>Монтаж
+        <div class="form__row form__row--checkbox">
+          <div class="form__group form__group--checkbox">
+            <label class="form__label form__label--checkbox" for="montag">
+              <input class="form__checkbox" id="montag" type="checkbox" checked><span class="form__custom-checkbox"></span>Монтаж
             </label>
           </div>
-          <div class="form__group">
-            <label class="form__label form__label--checkbox" for="">
-              <input class="form__checkbox" type="checkbox"><span class="form__custom-checkbox"></span>Доставка
+          <div class="form__group form__group--checkbox">
+            <label class="form__label form__label--checkbox" for="dostavka">
+              <input class="form__checkbox" id="dostavka" type="checkbox"><span class="form__custom-checkbox"></span>Доставка
             </label>
           </div>
         </div>

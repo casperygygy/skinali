@@ -12,5 +12,24 @@
 .offer-block
     width: 100%
     padding: 6.83760684% 16.2393162% 6.83760684% 6.83760684%
-    background-color: rgb(255, 255, 255)
+    background: #ffffff url('img/offer/offer-bg.png') no-repeat center right
+    background-size: contain
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1)
+
+
+
++max-screen(768px)
+    .offer
+        &__title
+            font-size: 1.2rem
+            +bold
+        &__description
+            font-size: 1rem
++max-screen(540px)
+    .offer-block
+        background-image: none
+        padding: 6.83760684%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
