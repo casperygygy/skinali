@@ -46,6 +46,7 @@
     position: relative
     line-height: .99
     cursor: pointer
+    
 
     &__label
         font-size: 1.0625rem
@@ -67,7 +68,18 @@
         cursor: pointer
         &:hover
             background-color: #dddddd
-
+    span
+        position: relative
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            right: -90%
+            top: -4%
+            border: solid #888888
+            border-width: 0 2px 2px 0
+            padding: 5px
+            transform: rotate(45deg)
 .open
     .dropdown__list
         top: calc(100% + 1px)
@@ -82,7 +94,17 @@
 +max-screen(1024px)
     .dropdown
         line-height: 1.1
-
+        span
+            &:after
+                right: -40%
++max-screen(1024px)
+    .dropdown
+        font-size: .8rem
+        line-height: 1.4
+        span
+            &:after
+                right: -25%
+                padding: 3px
 +max-screen(540px)
     .form
         &__row
@@ -116,6 +138,7 @@
             border-left-width: 1px
         .dropdown
             text-align: center
+            font-size: 1rem
             &__label
                 margin-bottom: 5px
             &__item

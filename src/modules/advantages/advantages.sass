@@ -1,0 +1,25 @@
+.advantages
+    &__block
+        display: flex
+        flex-wrap: wrap
+    &__item
+        flex-basis: 33.33%
+        text-align: center
+        margin-bottom: 8.547%
+    &__image
+        margin-bottom: 7.692%
+    &__description
+        display: block
+        font-size: 1.25rem
+
+
++max-screen(1024px)
+    .advantages
+        &__item
+            flex-basis: 50%
++max-screen(540px)
+    .advantages
+        &__item
+            flex-basis: 100%
+        &__image
+            margin-bottom: 4%
