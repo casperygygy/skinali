@@ -89,8 +89,13 @@ body {
   margin: 0 auto; }
 
 .section {
-  padding: 100px 0; }
+  padding: 5.2% 0; }
+  .section:nth-child(2) {
+    padding-bottom: 0px; }
   .section__title {
+    margin-bottom: 8.547%;
+    text-align: center;
+    text-transform: uppercase;
     font-size: 1.875rem;
     font-family: "ProximaNova", sans-serif;
     font-weight: 800; }
@@ -207,6 +212,9 @@ body {
     font-size: .45rem;
     padding-bottom: 1%; } }
 
+.offer__block {
+  transform: translateY(-20%); }
+
 .offer__title {
   margin-bottom: 2.2%;
   text-transform: uppercase;
@@ -235,6 +243,10 @@ body {
     font-size: 1rem; } }
 
 @media screen and (max-width: 540px) {
+  .offer {
+    padding-bottom: 6.51%; }
+    .offer__block {
+      transform: translateY(0); }
   .offer-block {
     background-image: none;
     padding: 6.83760684%;
@@ -242,6 +254,92 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; } }
+
+.advantages__block {
+  display: flex;
+  flex-wrap: wrap; }
+
+.advantages__item {
+  flex-basis: 33.33%;
+  text-align: center;
+  margin-bottom: 8.547%; }
+
+.advantages__image {
+  margin-bottom: 7.692%; }
+
+.advantages__description {
+  display: block;
+  font-size: 1.25rem; }
+
+@media screen and (max-width: 1024px) {
+  .advantages__item {
+    flex-basis: 50%; } }
+
+@media screen and (max-width: 540px) {
+  .advantages__item {
+    flex-basis: 100%; }
+  .advantages__image {
+    margin-bottom: 4%; } }
+
+.catalog__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5.1282%; }
+
+.catalog__item {
+  max-width: 570px;
+  max-height: 130px;
+  position: relative;
+  margin-bottom: 2.564%; }
+  .catalog__item:nth-child(7), .catalog__item:nth-child(8) {
+    margin-bottom: 0; }
+  .catalog__item:hover .catalog__button-group {
+    visibility: visible;
+    pointer-events: auto; }
+
+.catalog__image {
+  height: 100%;
+  width: 100%;
+  display: block; }
+
+.catalog__tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: rgba(80, 127, 225, 0.6);
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.catalog__button-group {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  visibility: hidden;
+  pointer-events: none; }
+  .catalog__button-group .favorite {
+    background: #6a99e9 url(img/heart-active.png) no-repeat center;
+    visibility: visible;
+    pointer-events: auto; }
+
+.catalog__button {
+  margin: 0 auto 2.13675% auto; }
+
+.catalog__description {
+  font-size: 1rem;
+  text-align: center; }
+
+@media screen and (max-width: 1170px) {
+  .catalog__block {
+    justify-content: center; }
+  .catalog__item:nth-child(7) {
+    margin-bottom: 2.564%; } }
 
 .button {
   display: flex;
@@ -277,10 +375,28 @@ body {
     line-height: .9; }
     .button--form:hover {
       background-color: #3866c7; }
+  .button--try-online, .button--add {
+    padding: 10px;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #6a99e9; }
+    .button--try-online:hover, .button--add:hover {
+      background-color: #ffffff;
+      color: #6a99e9; }
+  .button--favorites {
+    width: 33px;
+    height: 33px;
+    background: #6a99e9 url(img/heart.png) no-repeat center; }
+  .button--catalog {
+    padding: 2.5641% 2.82%; }
 
 @media screen and (max-width: 1024px) {
   .button--form {
     line-height: 1.2; } }
+
+@media screen and (max-width: 540px) {
+  .catalog__button-group {
+    display: none; } }
 
 .button-burger {
   width: 6.06837607%;

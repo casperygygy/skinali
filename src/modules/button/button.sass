@@ -35,8 +35,26 @@
         &:hover
             background-color: #3866c7
 
+    &--try-online, &--add
+        padding: 10px
+        font-size: 11px
+        color: #ffffff
+        background-color: #6a99e9
+        &:hover
+            background-color: #ffffff
+            color: #6a99e9
+            
+    &--favorites
+        width: 33px
+        height: 33px
+        background: #6a99e9 url('../dist/img/catalog/heart.png') no-repeat center
 
-
+    &--catalog
+        padding: 2.5641% 2.82%
 +max-screen(1024px)
     .button--form
         line-height: 1.2
++max-screen(540px)
+    .catalog__button-group
+        display: none
+      

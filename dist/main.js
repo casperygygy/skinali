@@ -3561,7 +3561,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/button-burger/button-burger */ \"./src/modules/button-burger/button-burger.js\");\n/* harmony import */ var _modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_form_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form/dropdown */ \"./src/modules/form/dropdown.js\");\n/* harmony import */ var _modules_form_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_form_dropdown__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main.sass */ \"./src/main.sass\");\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_sass__WEBPACK_IMPORTED_MODULE_2__);\n//*********************************************\n//\t\tScript\n//*********************************************\n\n //*********************************************\n//\t\tStyle\n//*********************************************\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/button-burger/button-burger */ \"./src/modules/button-burger/button-burger.js\");\n/* harmony import */ var _modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_button_burger_button_burger__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_form_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form/dropdown */ \"./src/modules/form/dropdown.js\");\n/* harmony import */ var _modules_form_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_form_dropdown__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_catalog_catalog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/catalog/catalog */ \"./src/modules/catalog/catalog.js\");\n/* harmony import */ var _modules_catalog_catalog__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_catalog_catalog__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main.sass */ \"./src/main.sass\");\n/* harmony import */ var _main_sass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_main_sass__WEBPACK_IMPORTED_MODULE_3__);\n//*********************************************\n//\t\tScript\n//*********************************************\n\n\n //*********************************************\n//\t\tStyle\n//*********************************************\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -3584,6 +3584,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, exports) {
 
 eval("// button-burger\n(function () {\n  // burger-animation\n  var burger = document.querySelector('.button-burger');\n  burger.addEventListener('click', function () {\n    burger.classList.toggle('active');\n  }); // menu displayed\n\n  burger.addEventListener('click', function () {\n    var menu = document.querySelector('.header__menu');\n    menu.classList.toggle('header__menu-display');\n  });\n})();\n\n//# sourceURL=webpack:///./src/modules/button-burger/button-burger.js?");
+
+/***/ }),
+
+/***/ "./src/modules/catalog/catalog.js":
+/*!****************************************!*\
+  !*** ./src/modules/catalog/catalog.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("(function () {\n  var catalogItems = document.querySelectorAll('.catalog__item');\n  Array.from(catalogItems, function (i) {\n    i.addEventListener('click', function (event) {\n      event.preventDefault(); // logic...\n    });\n    var favorite = i.querySelector('.button--favorites');\n    favorite.addEventListener('click', function () {\n      if (favorite.classList.contains('favorite')) {\n        favorite.classList.remove('favorite');\n      } else {\n        favorite.classList.add('favorite');\n      }\n    });\n  });\n})();\n\n//# sourceURL=webpack:///./src/modules/catalog/catalog.js?");
 
 /***/ }),
 
