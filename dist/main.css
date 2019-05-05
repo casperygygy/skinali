@@ -103,12 +103,16 @@ body {
 .bg-section {
   background-color: #f1f1f1; }
 
+@media screen and (max-width: 1280px) {
+  .container--priceAndKind {
+    width: 760px; } }
+
 @media screen and (max-width: 1170px) {
   html {
     font-size: 14px; }
   .container {
     width: 990px; }
-    .container--articles {
+    .container--articles, .container--priceAndKind {
       width: 770px; } }
 
 @media screen and (max-width: 1024px) {
@@ -398,6 +402,8 @@ body {
     width: 100%;
     padding: 33px 0;
     background-color: #ffffff; }
+  .articles-item:hover {
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.08); }
 
 @media screen and (max-width: 1170px) {
   .articles__block {
@@ -422,6 +428,67 @@ body {
     margin-right: 0; }
     .articles__item:last-child {
       margin-right: 0; } }
+
+.priceAndKind__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+.priceAndKind__priceAndKind-card {
+  margin-bottom: 0.8547%; }
+
+.priceAndKind-card {
+  width: 100%;
+  max-width: 284px;
+  position: relative; }
+  .priceAndKind-card__image-wrapper {
+    max-width: 284px;
+    max-height: 190px; }
+  .priceAndKind-card__text {
+    display: flex;
+    justify-content: space-between;
+    padding: 21px 24px;
+    font-size: 15px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2); }
+  .priceAndKind-card__price {
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 800; }
+  .priceAndKind-card__price, .priceAndKind-card__kind {
+    z-index: 10; }
+  .priceAndKind-card__button-wrapper {
+    width: calc(100% + 1px);
+    padding: 0 23px 19px 23px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 9999px; }
+    .priceAndKind-card__button-wrapper .help-block {
+      width: 100%;
+      height: 56.53px;
+      background: none; }
+  .priceAndKind-card:hover {
+    z-index: 99; }
+    .priceAndKind-card:hover .priceAndKind-card__text {
+      box-shadow: none; }
+    .priceAndKind-card:hover .priceAndKind-card__button-wrapper {
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+      bottom: -76px; }
+
+@media screen and (max-width: 1280px) {
+  .priceAndKind__block {
+    justify-content: center; }
+  .priceAndKind__priceAndKind-card {
+    margin-bottom: 3%; }
+    .priceAndKind__priceAndKind-card:nth-child(2n) {
+      margin-left: 3%; } }
+
+@media screen and (max-width: 770px) {
+  .priceAndKind-card:hover .priceAndKind-card__button-wrapper {
+    bottom: -74px; }
+  .priceAndKind__priceAndKind-card:nth-child(2n) {
+    margin-left: 0; }
+  .priceAndKind__priceAndKind-card:last-child {
+    margin-bottom: 0; } }
 
 .button {
   display: flex;
@@ -471,6 +538,9 @@ body {
     background: #6a99e9 url(img/heart.png) no-repeat center; }
   .button--catalog {
     padding: 2.5641% 2.82%; }
+  .button--priceAndKind {
+    width: 100%;
+    padding: 19.5px 0; }
 
 @media screen and (max-width: 1024px) {
   .button--form {
