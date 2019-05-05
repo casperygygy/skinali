@@ -1,0 +1,76 @@
+.articles
+    &__text
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 5.9829%
+    &__description
+        font-size: 1.5rem
+        +bold
+    &__all-articles
+        font-size: 1rem
+        color: $blue
+        text-decoration: underline
+    &__block
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        flex-basis: 100%
+    &__item
+        margin: 0 .95% 3% 0
+        &:last-child
+            margin-right: 0
+
+.articles-item
+    cursor: pointer
+    box-sizing: border-box
+    background-color: rgb(232, 232, 232)
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08)
+    width: 284px
+    height: 280px
+    &__image-wrapper
+        overflow: hidden
+        width: 100%
+        height: 100%
+        max-width: 284px
+        max-height: 200px
+    &__image
+        position: relative
+        display: block
+        width: 330px
+        height: 300px
+        top: -5px
+        left: -30px
+    &__title
+        line-height: .8
+        display: block
+        font-size: 18px
+        text-align: center
+        width: 100%
+        padding: 33px 0
+        background-color: #ffffff
+
+
+
++max-screen(1170px)
+    .articles__block
+        justify-content: center
+    .articles__item
+        margin-right: 3%
+        &:last-child
+            margin: 0 3% 3% 0
+
++max-screen(770px)
+    .articles__text
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    .articles__description
+        margin-bottom: 3%
++max-screen(540px)
+    .articles__description
+        font-size: 1rem
+    .articles__item
+        margin-right: 0
+        &:last-child
+            margin-right: 0
