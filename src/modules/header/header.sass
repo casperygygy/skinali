@@ -1,4 +1,5 @@
-.header            
+.header
+    position: relative     
     &__navbar
         position: fixed
         left: 0
@@ -17,9 +18,11 @@
         pointer-events: none
         z-index: 0
     &__menu-display
+        position: fixed
         visibility: visible
         top: 80px
         pointer-events: auto
+        z-index: 999
 
 
 +max-screen(768px)
