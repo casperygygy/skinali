@@ -4,6 +4,7 @@
 import './modules/button-burger/button-burger'
 import './modules/form/dropdown'
 import './modules/catalog/catalog'
+import './modules/slider/slider'
 
 //*********************************************
 //		Style
