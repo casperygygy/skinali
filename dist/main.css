@@ -127,7 +127,9 @@ body {
   html {
     font-size: 10px; }
   .container {
-    width: 290px; } }
+    width: 290px; }
+    .container--slider {
+      width: 100%; } }
 
 .header {
   position: relative; }
@@ -545,75 +547,116 @@ body {
     flex-basis: 100%;
     margin-bottom: 30px; } }
 
-.slider-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; }
-
-.slider__item {
-  width: 82.835%;
-  padding: 17.094% 0;
+.slider {
   position: relative; }
-
-.slider__before, .slider__after {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden; }
-
-.slider__after {
-  width: 50%; }
-
-.slider__image {
-  display: block;
-  width: 970px;
-  height: 400px; }
-
-.slider__control {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-  cursor: pointer; }
-  .slider__control:before {
-    content: '';
+  .slider-block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden; }
+  .slider__item {
+    width: 82.835%;
+    padding: 17.094% 0;
+    margin: 0 8.59%;
+    position: relative;
+    left: 0;
+    flex-shrink: 0; }
+  .slider__before, .slider__after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; }
+  .slider__after {
+    width: 50%; }
+  .slider__image {
     display: block;
-    width: 180px;
-    height: 2px;
-    background-color: #ffffff;
+    width: 970px;
+    height: 400px; }
+  .slider__prev, .slider__next {
     position: absolute;
-    top: calc(50% - 2px);
-    left: 38px; }
-  .slider__control:after {
-    content: '';
-    display: block;
-    width: 180px;
-    height: 2px;
-    background-color: #ffffff;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #d8d8d8;
+    cursor: pointer; }
+    .slider__prev:hover, .slider__next:hover {
+      color: #222222; }
+  .slider__prev {
+    left: 0; }
+  .slider__next {
+    right: 0; }
+  .slider__dots {
+    margin: 25px auto 0 auto;
+    width: 50px;
+    display: flex;
+    justify-content: space-between; }
+  .slider__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    cursor: pointer; }
+    .slider__dot:hover {
+      border: 2px solid #507fe1; }
+    .slider__dot--active {
+      background-color: #507fe1; }
+  .slider__control {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
     position: absolute;
-    top: calc(50% - 2px);
-    right: 38px; }
-  .slider__control-arrows:before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 10px;
-    border: 8px solid transparent;
-    border-top: 8px solid #ffffff; }
-  .slider__control-arrows:after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    right: 10px;
-    border: 8px solid transparent;
-    border-bottom: 8px solid #ffffff; }
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    cursor: pointer; }
+    .slider__control:before {
+      content: '';
+      display: block;
+      width: 180px;
+      height: 2px;
+      background-color: #ffffff;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 38px; }
+    .slider__control:after {
+      content: '';
+      display: block;
+      width: 180px;
+      height: 2px;
+      background-color: #ffffff;
+      position: absolute;
+      top: calc(50% - 2px);
+      right: 38px; }
+    .slider__control-arrows:before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 10px;
+      border: 8px solid transparent;
+      border-top: 8px solid #ffffff; }
+    .slider__control-arrows:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: 10px;
+      border: 8px solid transparent;
+      border-bottom: 8px solid #ffffff; }
+
+@media screen and (max-width: 1170px) {
+  .slider__control:before, .slider__control:after {
+    width: 150px; } }
+
+@media screen and (max-width: 1024px) {
+  .slider__control:before, .slider__control:after {
+    width: 110px; } }
+
+@media screen and (max-width: 770px) {
+  .slider__control:before, .slider__control:after {
+    width: 73px; } }
 
 .button {
   display: flex;

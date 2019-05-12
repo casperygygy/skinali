@@ -1,5 +1,5 @@
 section.section.slider
-    .container
+    .container.container--slider
         h2.section__title До и после
         .slider-block
             .slider__item#slider__item
@@ -9,3 +9,27 @@ section.section.slider
                     img(src="img/slider/2.png", alt="after").slider__image
                 .slider__control#slider__control
                     span.slider__control-arrows
+
+            .slider__item#slider__item__2
+                .slider__before#slider__before
+                    img(src="img/slider/1.png", alt="before").slider__image
+                .slider__after#slider__after
+                    img(src="img/slider/2.png", alt="after").slider__image
+                .slider__control#slider__control
+                    span.slider__control-arrows
+
+            .slider__item#slider__item__3
+                .slider__before#slider__before
+                    img(src="img/slider/1.png", alt="before").slider__image
+                .slider__after#slider__after
+                    img(src="img/slider/2.png", alt="after").slider__image
+                .slider__control#slider__control
+                    span.slider__control-arrows
+
+            a(title="prev").slider__prev &#10094
+            a(title="next").slider__next &#10095
+
+        .slider__dots
+            a.slider__dot
+            a.slider__dot
+            a.slider__dot

@@ -21,7 +21,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
-        host: '192.168.145.31',
+        host: '192.168.1.13',
         port: 3000
     },
     plugins: [

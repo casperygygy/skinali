@@ -1,15 +1,20 @@
 .slider
+    position: relative
     &-block
         display: flex
-        justify-content: center
         align-items: center
         width: 100%
+        position: relative
+        overflow: hidden
     &__item
         width: 82.835%
         padding: 17.094% 0
+        margin: 0 8.59%
         // width: 970px
         // height: 400px
         position: relative
+        left: 0
+        flex-shrink: 0
     &__before,&__after
         width: 100%
         height: 100%
@@ -23,6 +28,34 @@
         display: block
         width: 970px
         height: 400px
+    &__prev, &__next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        font-size: 40px
+        color: #d8d8d8
+        cursor: pointer
+        &:hover
+            color: #222222
+    &__prev
+        left: 0
+    &__next
+        right: 0
+    &__dots
+        margin: 25px auto 0 auto
+        width: 50px
+        display: flex
+        justify-content: space-between
+    &__dot
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: #d1d1d1
+        cursor: pointer
+        &:hover
+            border: 2px solid $blue
+        &--active
+            background-color: $blue
     &__control
         width: 40px
         height: 40px
@@ -67,3 +100,16 @@
                 border: 8px solid transparent
                 border-bottom: 8px solid #ffffff
 
+
++max-screen(1170px)
+    .slider__control
+        &:before, &:after
+            width: 150px
++max-screen(1024px)
+    .slider__control
+        &:before, &:after
+            width: 110px
++max-screen(770px)
+    .slider__control
+        &:before, &:after
+            width: 73px

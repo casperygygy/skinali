@@ -1,30 +1,42 @@
-class Compare {
-    constructor (el) {
-        let is_active = false;
-        this.$el = document.querySelector(el);
-        this.control = this.$el.querySelector('#slider__control');
-        this.afterImage = this.$el.querySelector('#slider__after');
-        this.$el.addEventListener('mousemove', (event) => {
+(()=>{
+    let btnNext = document.querySelector('.slider__next');
+    let btnPrev = document.querySelector('.slider__prev');
 
-            if(event.target.className === 'slider__image') {
-                let x = event.offsetX;
-                event.preventDefault()
-                this.control.addEventListener('mousedown', ()=>{
-                    event.preventDefault()
-                    is_active = true;
-                })
-                this.$el.addEventListener('mouseup', ()=>{
-                    is_active = false;
-                })
-        
-                if ( is_active === true ) {
-                    this.afterImage.style.width = x + 'px'
-                    this.control.style.left = this.afterImage.style.width
-                }
-            }
+    let dots = document.querySelectorAll('.slider__dots');
+
+    let sliderItems = Array.from(document.querySelectorAll('.slider__item'));
+    let left = 0;
+    btnNext.addEventListener('click', ()=>{
+        if (left <= -200){
+            left = 0
+            sliderItems.forEach((e)=>{
+                e.style.left = left + '%'
+            })
+        } else {
+            left = left - 100;
+            sliderItems.forEach((e)=>{
+            e.style.left = left + '%'
         })
-    }
-}
+        }
+        
+    })
+    btnPrev.addEventListener('click', ()=>{
+        if (left >= 0) {
+            left = -300 + 100;
+            sliderItems.forEach((e)=>{
+                e.style.left = left + '%'
+            })
+        } else {
+            left = left + 100;
+            sliderItems.forEach((e)=>{
+            e.style.left = left + '%'
+        })
+        }
+        
+    })
 
-const compare = new Compare('#slider__item')
-
+    // console.log(btnNext);
+    // console.log(btnPrev);
+    // console.log(dots);
+    
+})()
