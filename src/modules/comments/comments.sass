@@ -1,0 +1,56 @@
+.comments-block
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+
+.comment
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex-basis: 33.333%
+    &__user-text
+        width: 94.8717949%
+        padding: 5.12820%
+        min-height: 134px
+        background-color: #ffffff
+        border-radius: 10px
+        text-align: center
+        font-style: italic
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            left: 47%
+            bottom: -20px
+            border: 10px solid transparent
+            border-top: 10px solid #ffffff
+    &__user-image
+        margin: 7.5% 0
+        width: 17.9487179%
+        padding: 8.5% 0
+        position: relative
+        overflow: hidden
+        border-radius: 50%
+        border: 2px solid $blue
+        img
+            position: absolute
+            top: 0px
+            left: -25px
+
+    &__user-name
+        font-size: 0.875rem
+        +bold
+        text-align: center
+
+
++max-screen(770px)
+    .comments-block
+        flex-direction: column
+    .comment
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+        &__user-text
+            min-height: 0
+        &__user-image
+            margin: 3% 0

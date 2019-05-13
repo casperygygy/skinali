@@ -1,0 +1,41 @@
+.production
+    &-block
+        padding: 0 8.547%
+        display: flex
+        // align-items: center
+        justify-content: center
+    &__image
+        flex-basis: 31.6239316%
+    &__description
+        flex-basis: 68.3760684%
+        padding-left: 10.3092784%
+        font-size: 1.25rem
+        line-height: 1.5
+
+
++max-screen(1024px)
+    .production
+        &-block
+            padding: 0
+        // &__image
+        //     margin: 0 auto 20px auto
+        // &__description
+        //     padding-left: 0
++max-screen(770px)
+    .production
+        &-block
+            flex-direction: column
+        &__image
+            margin: 0 auto 20px auto
+        &__description
+            width: 370px
+            padding: 0
+            margin: 0 auto
+
++max-screen(540px)
+    .production__image
+        img
+            width: 100%
+            height: 100%
+    .production__description
+        width: 100%

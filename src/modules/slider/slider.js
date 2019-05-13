@@ -62,22 +62,23 @@
                 dots.childNodes[i].classList.remove('slider__dot--active')
                 event.target.classList.add('slider__dot--active')                
             }
+            if (event.target.dataset.name === '1') {
+                left = 0
+                current = 0
+            
+            } else if ( event.target.dataset.name === '2') {
+                left = -100
+                current = 1
+            } else {
+                left = - 200
+                current = 2
+            }
+    
+            sliderItems.forEach((e)=>{
+                e.style.left = left + '%'
+            })
            
         }
-        if (event.target.dataset.name === '1') {
-            left = 0
-            current = 0
         
-        } else if ( event.target.dataset.name === '2') {
-            left = -100
-            current = 1
-        } else {
-            left = - 200
-            current = 2
-        }
-
-        sliderItems.forEach((e)=>{
-            e.style.left = left + '%'
-        })
     })
 })()
