@@ -9,16 +9,28 @@
         +bold
     &__description
         display: block
-        margin-bottom: 4.25%   
+        margin-bottom: 4.25%
         font-size: 1.3125rem
+        max-width: 865px
 .offer-block
     width: 100%
     padding: 6.83760684% 16.2393162% 6.83760684% 6.83760684%
     background: #ffffff url('img/offer/offer-bg.png') no-repeat center right
     background-size: contain
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1)
+    &--whereIsCheaper
+        background-image: url('img/offer/cheaper-bg.png')
 
 
++max-screen(1200px)
+    .offer
+        &__description
+            max-width: 720px
++max-screen(1024px)
+    .offer
+        &__description
+            font-size: 1rem
+            max-width: 550px
 
 +max-screen(768px)
     .offer
@@ -29,6 +41,8 @@
             font-size: 1rem
 +max-screen(540px)
     .offer
+        &__description
+            text-align: center
         padding-bottom: 6.51%
         &__block
             transform: translateY(0)
@@ -39,3 +53,4 @@
         flex-direction: column
         align-items: center
         justify-content: center
+        

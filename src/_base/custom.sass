@@ -14,7 +14,9 @@ body
         font-size: 1.875rem
         +bold
     &--comments
-        padding-bottom: 14.3229167%
+        padding-bottom: 275px
+    &--production
+        padding-top: 375px
 .bg-section
     background-color: $bg-section
 
@@ -30,6 +32,9 @@ body
         width: 990px
         &--articles, &--priceAndKind
             width: 770px
+    .section
+        &--production
+            padding-top: 275px
 
 +max-screen(1024px)
     .container
@@ -39,6 +44,11 @@ body
 +max-screen(768px)
     .container
         width: 540px
+    .section
+        &--comments
+            padding-bottom: 245px
+        &--production
+            padding-top: 175px
 
 
 +max-screen(540px)
@@ -48,3 +58,9 @@ body
         width: 290px
         &--slider
             width: 100%
+            
+    .section
+        &--comments
+            padding-bottom: 275px
+        &--production
+            padding-top: 275px
