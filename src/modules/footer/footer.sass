@@ -1,0 +1,62 @@
+.footer
+    background-color: #262626
+    padding: 40px 0
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    &__licence
+        display: block
+        margin-top: 23.3644%
+        color: #767676
+        font-size: 0.875rem
+    &__paymant
+        display: flex
+        align-items: center
+        &__image
+            margin-right: 25px
+            &:last-child
+                margin-right: 0
+
+
+    &__contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: space-between
+        height: 100px
+    &__phone
+        display: block
+        font-size: 1.25rem
+        +bold
+        text-decoration: none
+        color: #ffffff
+    &__mail
+        font-size: 1rem
+        color: #ffffff
+        text-decoration: underline
+    &__social-network
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        &__icon
+            margin-left: 15px
+            &:first-child
+                margin-left: 0
+
+
++max-screen(780px)
+    .footer__wrapper
+        flex-direction: column-reverse
+        align-items: center
+    .footer__contacts
+        align-items: center
+    .footer__paymant
+        margin: 20px 0
+    .footer__logo
+        text-align: center
++max-screen(540px)
+    .footer__paymant
+        flex-direction: column
+        &__image
+            margin: 0 0 15px 0

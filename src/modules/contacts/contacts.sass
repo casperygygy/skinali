@@ -1,0 +1,39 @@
+.contacts
+    &-block
+        display: flex
+        justify-content: space-around
+    &__info
+        text-align: center
+    &__text
+        display: block
+        margin-top: 25px
+        text-decoration: none
+        font-size: 1rem
+        color: #000000
+    &__map
+        margin: 2.604166% 0 4.427% 0
+    &__questions
+        display: flex
+        justify-content: center
+        align-items: center
+    &__question
+        font-size: 1.875rem
+        +bold
+        margin-right: 4%
+    &__answer
+        font-size: 1.5rem
+        text-decoration: underline
+
++max-screen(540px)
+    .contacts
+        &-block
+            flex-direction: column
+        &__info
+            margin-bottom: 20px
+            // &:last-child
+            //     margin-bottom: 0
+        &__questions
+            flex-direction: column
+            text-align: center
+        &__question
+            margin: 0 0 15px 0
